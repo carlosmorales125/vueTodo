@@ -16,6 +16,8 @@
     </form>
 </template>
 <script>
+  import { EventBus } from '../../event-bus';
+
   export default {
     name: 'todoForm',
     data() {
@@ -25,7 +27,7 @@
     },
     methods: {
       addTodo() {
-        this.$emit('addTodo', this.inputVal);
+        EventBus.$emit('addTodo', this.inputVal);
         this.inputVal = 'Enter a New Task';
       }
     }

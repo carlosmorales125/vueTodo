@@ -38,8 +38,14 @@
     },
     mounted() {
       EventBus.$on('completeTask', itemId => {
-        console.log(`here is the itemId: ${itemId} and here is ${this}`);
-        console.dir(this.todoList);
+        this.todoList.forEach(item => item.done = (itemId == item.id));
+      });
+      EventBus.$on('addTodo', newTodoDescription => {
+        this.todoList.push({
+          id: parseInt(new Date()),
+          description: newTodoDescription,
+          done: false
+        });
       });
     }
   };
