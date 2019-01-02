@@ -23,6 +23,11 @@ import Slider from './Slider.vue';
 
 import Pagination from './Pagination.vue';
 
+import Item from './TodoList/Item.vue';
+import List from './TodoList/List.vue';
+
+import Form from './TodoListForm/Form.vue';
+
 export {
   Alert,
   Collapse,
@@ -44,5 +49,8 @@ export {
   Modal,
   Parallax,
   Slider,
-  Button
+  Button,
+  Item,
+  List,
+  Form
 };

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Starter from './pages/StarterPage.vue';
+import Todo from './pages/Todo.vue';
 import StarterNavbar from './layout/StarterNavbar.vue';
 import StarterFooter from './layout/StarterFooter.vue';
 
@@ -11,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      components: { default: Starter, header: StarterNavbar, footer: StarterFooter },
+      components: { default: Todo, header: StarterNavbar, footer: StarterFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }

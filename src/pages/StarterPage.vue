@@ -1,14 +1,22 @@
 <template>
-    <div class="starter-page">
+    <div class="starter-page container">
         <div class="section text-center">
-            <h3>Create your next awesome website</h3>
+            <h3>Create your next awesome website hey</h3>
         </div>
+        <Card type="default" title="carlos">
+            <div slot="info">test</div>
+        </Card>
     </div>
 </template>
 <script>
-  export default {
-    name: 'starter'
-  };
+    import { Card } from '../components';
+
+    export default {
+      name: 'starter',
+      components: {
+        Card,
+      }
+    };
 </script>
 <style>
     .starter-page {
