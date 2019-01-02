@@ -2,7 +2,12 @@
     <div class="row">
         <div class="card mx-auto" >
             <ul class="list-group list-group-flush">
-                <Item v-for="item in todolist">{{ item }}</Item>
+                <Item v-for="item in todoList"
+                      v-if="!item.done"
+                      v-bind:itemId="item.id"
+                >
+                    {{ item.description }}
+                </Item>
             </ul>
         </div>
     </div>
@@ -14,15 +19,9 @@
     components: {
       Item,
     },
-    data() {
-      return {
-        todolist: [
-          'Hey Ma! I\'m Still an Item!',
-          'another item',
-          'oh boy!'
-        ]
-      }
-    }
+    props: {
+      todoList: Array
+    },
   };
 </script>
 <style>

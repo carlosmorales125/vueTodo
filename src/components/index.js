@@ -26,7 +26,7 @@ import Pagination from './Pagination.vue';
 import Item from './TodoList/Item.vue';
 import List from './TodoList/List.vue';
 
-import Form from './TodoListForm/Form.vue';
+import TodoForm from './TodoListForm/TodoForm.vue';
 
 export {
   Alert,
@@ -52,5 +52,5 @@ export {
   Button,
   Item,
   List,
-  Form
+  TodoForm
 };
