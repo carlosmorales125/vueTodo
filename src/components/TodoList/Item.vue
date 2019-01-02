@@ -1,6 +1,9 @@
 <template>
     <li class="list-group-item">
-        <slot></slot>
+            <span>
+                <slot></slot>
+            </span>
+            <button class="btn btn-primary" type="submit">All Done!</button>
     </li>
 </template>
 <script>
@@ -9,5 +12,9 @@
   };
 </script>
 <style>
-
+  .list-group-item {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+  }
 </style>
