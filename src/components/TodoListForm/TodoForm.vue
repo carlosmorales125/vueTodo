@@ -4,7 +4,7 @@
             <input type="text"
                    class="form-control"
                    id="newTask"
-                   :placeholder="inputVal"
+                   :placeholder="placeholder"
                    v-model="inputVal"
             >
             <button class="btn btn-primary"
@@ -16,30 +16,31 @@
     </form>
 </template>
 <script>
-  import { EventBus } from '../../event-bus';
+import { EventBus } from '../../event-bus';
 
-  export default {
-    name: 'todoForm',
-    data() {
-      return {
-        inputVal: 'Enter a New Task'
-      }
-    },
-    methods: {
-      addTodo() {
-        EventBus.$emit('addTodo', this.inputVal);
-        this.inputVal = 'Enter a New Task';
-      }
+export default {
+  name: 'todoForm',
+  data() {
+    return {
+      placeholder: 'Enter a New Task',
+      inputVal: ''
+    };
+  },
+  methods: {
+    addTodo() {
+      EventBus.$emit('addTodo', this.inputVal);
+      this.inputVal = '';
     }
-  };
+  }
+};
 </script>
-<style>
-    form .form-group button {
-        width: 100%;
-    }
+<style scoped>
+form .form-group button {
+  width: 100%;
+}
 
-    form {
-        margin: 0 auto;
-        max-width: 600px;
-    }
+form {
+  margin: 0 auto;
+  max-width: 600px;
+}
 </style>

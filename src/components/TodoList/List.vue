@@ -5,6 +5,7 @@
                 <Item v-for="item in todoList"
                       v-if="!item.done"
                       v-bind:itemId="item.id"
+                      v-bind:key="item.id"
                 >
                     {{ item.description }}
                 </Item>
@@ -13,19 +14,20 @@
     </div>
 </template>
 <script>
-  import Item from './Item.vue';
-  export default {
-    name: 'list',
-    components: {
-      Item,
-    },
-    props: {
-      todoList: Array
-    },
-  };
+import Item from './Item.vue';
+
+export default {
+  name: 'list',
+  components: {
+    Item
+  },
+  props: {
+    todoList: Array
+  }
+};
 </script>
-<style>
-    .card {
-        max-width: 600px;
-    }
+<style scoped>
+.card {
+  max-width: 600px;
+}
 </style>

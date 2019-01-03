@@ -9,17 +9,17 @@
     </div>
 </template>
 <script>
-    import { Card } from '../components';
+import { Card } from '../components';
 
-    export default {
-      name: 'starter',
-      components: {
-        Card,
-      }
-    };
+export default {
+  name: 'starter',
+  components: {
+    Card
+  }
+};
 </script>
 <style>
-    .starter-page {
-        min-height: calc(100vh - 95px);
-    }
+.starter-page {
+  min-height: calc(100vh - 95px);
+}
 </style>
